@@ -18,4 +18,18 @@ class GetMahasiswa extends RestController
 		$resultmhs = $mhs->get_mahasiswa();
 		$this->response($resultmhs, 200);
 	}
+
+	public function MahasiswaById_get($nim)
+	{
+		$mhs = new ModelMahasiswa();
+		$resultmhs = $mhs->get_mahasiswa_byid($nim);
+		$this->response($resultmhs, 200);
+	}
+
+	public function MahasiswaByTlp_get($tlp)
+	{
+		$mhs = new ModelMahasiswa();
+		$resultmhs = $mhs->get_mahasiswa_bytlp($tlp);
+		$this->response($resultmhs, 200);
+	}
 }

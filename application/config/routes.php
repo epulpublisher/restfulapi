@@ -54,4 +54,6 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['api/mahasiswa'] = 'api/GetMahasiswa/index';
+$route['api/mahasiswa/(:any)'] = 'api/GetMahasiswa/MahasiswaById/$1';
+$route['api/mahasiswabytlp/(:any)'] = 'api/GetMahasiswa/MahasiswaByTlp/$1';
 $route['test/matakuliah'] = 'test/GetMatakuliah/index';
